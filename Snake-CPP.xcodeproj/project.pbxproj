@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		EA90C4492DA4C11E00A5E49F /* Snake-CPP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Snake-CPP"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA90C45C2DA4DACD00A5E49F /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		EA90C45E2DA4F4FF00A5E49F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -50,6 +51,7 @@
 		EA90C4402DA4C11E00A5E49F = {
 			isa = PBXGroup;
 			children = (
+				EA90C45E2DA4F4FF00A5E49F /* .gitignore */,
 				EA90C44B2DA4C11E00A5E49F /* Snake-CPP */,
 				EA90C45B2DA4DACD00A5E49F /* Frameworks */,
 				EA90C44A2DA4C11E00A5E49F /* Products */,
