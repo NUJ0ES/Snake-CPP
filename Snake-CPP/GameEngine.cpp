@@ -24,6 +24,9 @@ void GameEngine::transcribe() {
 }
 
 void GameEngine::makePrey() {
+    preyX = rand() % GRID_WIDTH;
+    preyY = rand() % GRID_HEIGHT;
+    
     while (snake[preyY][preyX]) {
         preyX = rand() % GRID_WIDTH;
         preyY = rand() % GRID_HEIGHT;
@@ -38,6 +41,8 @@ void GameEngine::next(double dt) {
         else if (direction == Direction::DOWN) snakeY++;
         
         isDirectionChangable = true;
+        
+        prevState = snake[snakeY][snakeX];
         
         maintainLength();
         
@@ -82,7 +87,8 @@ void GameEngine::eat() {
     }
 }
 
-void GameEngine::handleCollision() {
+void GameEngine::handleGameState() {
     if (snakeX > GRID_WIDTH - 1 || snakeX < 0 || snakeY < 0 || snakeY > GRID_HEIGHT - 1) state = GameState::GAMEOVER;
-    // TODO: End game if snake collides with itself
+    if (prevState > 0) state = GameState::GAMEOVER;
+    if (length == GRID_WIDTH * GRID_HEIGHT) state = GameState::GAMEOVER;
 }

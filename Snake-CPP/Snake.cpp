@@ -37,7 +37,7 @@ int main(int argc, const char * argv[]) {
         if (dt < INTERVAL) continue;
         prev = curr;
         
-        gameEngine->handleCollision();
+        gameEngine->handleGameState();
         
         if (CGEventSourceKeyState(kCGEventSourceStateHIDSystemState, kVK_LeftArrow)) {
             gameEngine->setDirection('l');

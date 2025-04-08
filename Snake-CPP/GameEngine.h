@@ -29,6 +29,7 @@ public:
     
     double elapsed = 0.0;
     bool isDirectionChangable = true;
+    int prevState = 0;
     
     void init();
     
@@ -44,7 +45,7 @@ public:
     
     void eat();
     
-    void handleCollision();
+    void handleGameState();
 };
 
 #endif
