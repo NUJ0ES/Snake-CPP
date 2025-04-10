@@ -89,6 +89,6 @@ void GameEngine::eat() {
 
 void GameEngine::handleGameState() {
     if (snakeX > GRID_WIDTH - 1 || snakeX < 0 || snakeY < 0 || snakeY > GRID_HEIGHT - 1) state = GameState::GAMEOVER;
-    if (prevState > 0) state = GameState::GAMEOVER;
+    if (prevState > 1) state = GameState::GAMEOVER;
     if (length == GRID_WIDTH * GRID_HEIGHT) state = GameState::GAMEOVER;
 }
